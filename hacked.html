@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Demo</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h2>You are hacked!</h2>
+        <p>This is just a demo popup.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
